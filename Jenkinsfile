@@ -13,7 +13,7 @@ node {
                     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                       
                         sh "git config user.email haripriyapogaku@gmail.com"
-                        sh "git config user.name priya241302
+                        sh "git config user.name priya241302"
                       
                         sh "cat deployment.yaml"
                         sh "sed -i 's+priya247/flask-app.*+priya247/flask-app:${DOCKERTAG}+g' deployment.yaml"
