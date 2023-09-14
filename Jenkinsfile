@@ -21,7 +21,11 @@ node {
                         sh "git add ."
                         sh "git commit -m 'By Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/K8s-Manifests-ArgoCD.git HEAD:main" 
-      }
+
+
+                        
+                        
+        }
     }
   }
 }
