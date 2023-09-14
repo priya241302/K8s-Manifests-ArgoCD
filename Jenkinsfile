@@ -12,11 +12,11 @@ node {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                       
-                        sh "git config user.email sridhar02101998@gmail.com"
-                        sh "git config user.name sridhar-modalavalasa"
+                        sh "git config user.email haripriyapogaku@gmail.com"
+                        sh "git config user.name priya241302
                       
                         sh "cat deployment.yaml"
-                        sh "sed -i 's+shreedhar4037/flask-app.*+shreedhar4037/flask-app:${DOCKERTAG}+g' deployment.yaml"
+                        sh "sed -i 's+priya247/flask-app.*+priya247/flask-app:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'By Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
